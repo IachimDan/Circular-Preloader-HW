@@ -1,0 +1,62 @@
+body{
+    background-color: #112;
+}
+
+.preloader {
+    width: 200px;
+    height: 200px;
+}
+
+.preloader .lg {
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #555;
+    /* HW1: how many pixels -> offset?(cu cati px a iesit inafara) 
+    Raspuns: Cu 5px, deoarece:
+    1. div-ul dat e in alt div si din cauza aceasta se reda o distanta egala cu px a borderului
+    2. plus la aceastea marimea div-ului este egala deja cu width: 210px / height: 210px;
+    din cauza borderului = 5px si automat este adaugat padding = 5px
+    
+    */
+    border-radius: 100px;
+    border-top-color: transparent;
+
+    box-sizing: border-box;
+    animation: rot 10s infinite linear ;
+    
+}
+
+.preloader .sm {
+    border: 5px solid #999;
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    border-bottom-color: transparent;
+    /*transform: translateX(15px) translateY(15px);*/
+
+    /* HW2. Using transform: translate X,Y
+    center the inner cercle 
+        HW3. make the inner circle rotates inverse
+    */
+    animation: rev 5s infinite linear;
+    animation-direction: reverse;
+}
+
+@keyframes rot {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rev {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
